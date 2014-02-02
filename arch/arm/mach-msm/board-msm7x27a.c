@@ -1106,13 +1106,13 @@ static void __init msm7x27a_reserve(void)
 }
 
 
-/* 此段代码被全部移到static void __init msm7x27a_reserve(void)函数前面 */
+/* \B4硕未\FA\C2氡蝗玕B2\BF\D2频\BDstatic void __init msm7x27a_reserve(void)\BA\AF\CA\FD前\C3\E6 */
 
 static void __init msm8625_reserve(void)
 {
 	msm7x27a_reserve();
 
-/* 此段代码被全部移到的实现被移到static void __init msm7x27a_reserve(void)函数里面实现 */
+/* \B4硕未\FA\C2氡蝗玕B2\BF\D2频\BD\B5\C4实\CF直\BB\D2频\BDstatic void __init msm7x27a_reserve(void)\BA\AF\CA\FD\C0\EF\C3\E6实\CF\D6 */
 
 	memblock_remove(MSM8625_SECONDARY_PHYS, SZ_8);
 	memblock_remove(MSM8625_WARM_BOOT_PHYS, SZ_32);
@@ -1509,7 +1509,7 @@ static void __init msm7x2x_init(void)
 	msm7x27a_pm_init();
 	register_i2c_devices();
 	//msm7627a_bt_power_init() will check QC or BCM bt chip powers inner.
-	msm7627a_bt_power_init();
+	//msm7627a_bt_power_init();
 	msm7627a_camera_init();
 	msm7627a_add_io_devices();
 	/*7x25a kgsl initializations*/
